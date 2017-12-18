@@ -23,6 +23,7 @@ matrix:
                     - g++-4.9
           env: 
             - CXX=g++-4.9
+            - CC=gcc-4.9
             - PELOTON_BUILD_TYPE=Debug
             - COVERALLS=Off
 
@@ -39,9 +40,10 @@ matrix:
                     - g++-4.9
           env: 
             - CXX=g++-4.9
+            - CC=gcc-4.9
             - PELOTON_BUILD_TYPE=Release
             - COVERALLS=Off
-        
+
         #Job where coveralls is executed
         - os: linux
           sudo: required
@@ -54,8 +56,9 @@ matrix:
                       - ubuntu-toolchain-r-test
                   packages:
                     - g++-5
-          env: 
+          env:
             - CXX=g++-5
+            - CC=gcc-5
             - PELOTON_BUILD_TYPE=Debug
             - COVERALLS=On
 
@@ -72,6 +75,7 @@ matrix:
                     - g++-5
           env: 
             - CXX=g++-5
+            - CC=gcc-5
             - PELOTON_BUILD_TYPE=Release
             - COVERALLS=Off
 
